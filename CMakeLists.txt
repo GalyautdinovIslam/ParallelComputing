@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.23)
+project(ParallelComputing)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
+
+add_executable(OpenMP_Task1 OpenMP/task1.cpp)
+add_executable(OpenMP_Task2 OpenMP/task2.cpp)
+add_executable(OpenMP_Task3 OpenMP/task3.cpp)
+add_executable(OpenMP_Task4 OpenMP/task4.cpp)
+add_executable(OpenMP_Task5 OpenMP/task5.cpp)
+add_executable(OpenMP_Task6 OpenMP/task6.cpp)
+add_executable(OpenMP_Task7 OpenMP/task7.cpp)
+add_executable(OpenMP_Task8 OpenMP/task8.cpp)
+add_executable(OpenMP_Task9 OpenMP/task9.cpp)
+add_executable(OpenMP_Task10 OpenMP/task10.cpp)
+add_executable(OpenMP_Task11 OpenMP/task11.cpp)
+add_executable(OpenMP_Task13 OpenMP/task13.cpp)
+add_executable(OpenMP_Task14 OpenMP/task14.cpp)
+add_executable(OpenMP_Task15 OpenMP/task15.cpp)
+
+find_package(MPI REQUIRED)
+
+add_executable(MPI_Task_1_1 MPI/Task1_1.cpp)
+target_link_libraries(MPI_Task_1_1 PUBLIC MPI::MPI_CXX)
